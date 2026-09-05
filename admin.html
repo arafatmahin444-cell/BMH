@@ -34,7 +34,7 @@ input,textarea,select{width:100%;padding:12px;background:#0d0c0b;color:#fff;bord
 </form></div></section></main>
 
 <script>
-const URL="https://ddlabynkdnaemvdfrmce.supabase.co",KEY="sb_publishable_NUOua2PDUwhgWnfg1rUWTg_tMhEeLgk",BUCKET="concert-posters";
+const URL="https://ddlabynkdnaemvdfrmce.supabase.co",KEY="sb_publishable_zi8cKWC-0qIGVVcU3r6hyw_mL0cecoc",BUCKET="concert-posters";
 let token="",rows=[],current=null;const $=x=>document.getElementById(x);
 function show(e,t,c=""){e.textContent=t;e.className="msg "+c;e.classList.remove("hidden")}function hide(e){e.classList.add("hidden")}
 async function api(path,opt={}){let r=await fetch(URL+path,{...opt,headers:{apikey:KEY,Authorization:"Bearer "+(token||KEY),"Content-Type":"application/json",...(opt.headers||{})}}),t=await r.text(),d;try{d=JSON.parse(t)}catch{}if(!r.ok)throw Error(d?.message||d?.error_description||t||"Request failed");return d}
